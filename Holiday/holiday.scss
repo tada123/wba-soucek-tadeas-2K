@@ -1,0 +1,160 @@
+
+
+
+@mixin smoothtrans{
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+$hdsize: 60px;
+$bgposition: fixed;
+
+.infodiv{
+    position: relative;
+    top: 20vh;
+    display: grid;
+    gap: 35px;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 70vh;
+    @media (min-width: 600px) {
+        width: 70%;
+    }
+}
+.infosub{
+    position: relative;
+    width: 100%;
+    height: 100%; //vw is RIGHT HERE!!!
+}
+.infosub_img{
+    position: absolute;
+    aspect-ratio: 1 / 1;
+    width: auto;
+    height: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.infosub > span{
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -100%);
+    color: #000000ff;
+    width: max-content;
+}
+.center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin introdiv{
+    margin: unset;
+    width: 100%;
+    min-height: 100vh;
+}
+@mixin defaultfont{
+    font-weight: bold;
+    text-align: center;
+    font-family: Arial;
+    text-transform: uppercase;
+}
+#maindiv{
+    @include introdiv;
+}
+#mainbg{
+    @include introdiv;
+    position: $bgposition;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("images/bottle.png");
+}
+#holidaybox{
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    width: 50%;
+    height: 30%;
+    background-color: #0000003f;
+}
+.placeimg{
+    position: absolute;
+    //width: 100%;
+    //height: 50%;
+    width: 100%;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover; 
+}
+.holidayhp{
+    @include defaultfont;
+    font-size: 22px;
+    margin: 15px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#destinations{
+    height: 1200px;
+}
+#placetiles{
+    position: relative;
+    @media only screen and (min-width: 600px) {
+        display: flex;
+    }
+    gap: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: auto;
+    margin-bottom: 10vh;
+}
+.whitefull{
+    position: relative;
+    background-color: #efefefff;
+    width: 100%;
+}
+.textblock{
+    position: relative;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+body{
+    background-color: #eeede8ff;
+    width: 100vw;
+    height: 100vh;
+    margin: unset;
+    color: #ffffffff;
+}
+p{
+    margin: unset;
+    font-family: Arial;
+}
+button{
+    color: #ffffffff;
+    position: relative;
+    cursor: pointer;
+    margin: unset;
+    border: none;
+    background-color: #6f6f6fff;
+    width: 120px;
+    height: 40px;
+    @include smoothtrans;
+}
+button:hover{
+    @include smoothtrans;
+    background-color: #8f8f8fff;
+}
+button:active{
+    @include smoothtrans;
+    background-color: #4f4f4fff;
+}
+
+
+
+
+
+@import "navbar.scss";
+@import "contact.scss";
+

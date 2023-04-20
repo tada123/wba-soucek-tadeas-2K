@@ -1,0 +1,61 @@
+
+ 
+#logoimg{
+    position: absolute;
+    aspect-ratio: 1 / 1;
+    height: $hdsize;
+}
+.header{
+    background-color: #cec5b6ff;
+}
+
+#hdrtbr{
+    position: relative;
+    left: 100%;
+    transform: translateX(-100%);    
+}
+
+#navbar{
+    position: fixed;
+    left: 0px;
+    width: 100%;
+    height: $hdsize;
+    
+    top: 0px;
+    border: none;
+    overflow: hidden;
+    overflow-y: hidden;
+    margin: none;
+    background-color: #cbc2b3ff;
+    z-index: 1;
+} 
+
+.navlinkcnt{
+    width: auto;
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    right: 10%;
+    display: flex;
+    gap: 50px;
+}
+.navlink{
+    @include defaultfont;
+    position: relative;
+    background-color: #00000000;
+    color: #000000ff;
+    text-decoration: none;
+    height: fit-content;
+    
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+
+#contactgrid{
+    
+}
+
+
+
+

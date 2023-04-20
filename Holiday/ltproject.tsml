@@ -1,0 +1,47 @@
+
+#Easy settings:
+project_name = "Holiday"
+binary_name = "Holiday"
+
+debugger = "/usr/bin/gdb"
+browser = "firefox" #Browser to test your webpage
+
+
+#Advanced settings:
+#######################################################
+
+project:
+    name = "$project_name;"
+    type = "website"
+
+    opts:
+        debug = true
+    languages:
+        "HTML"
+        "CSS"
+        "JavaScript"
+            
+    targets:
+        name = "maingrp"
+        target:
+            name = "$project_name"
+            files:
+                "index.html"
+
+    main_target = "$project_name"
+    clear:
+        command = ""
+    build:
+        command = "sassc holiday.scss > holiday.css"
+    
+    debugging:
+        _none
+        
+    
+    #DEPRECATED
+    debug:
+        binary = "/dev/null"
+        command = "echo Blah"
+#        command = "$browser; $testurl"
+
+
