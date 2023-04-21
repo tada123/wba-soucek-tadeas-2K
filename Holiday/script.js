@@ -3,7 +3,7 @@ const navlinks = {
     "Dovolená": "index.html",
     "Praktické informace": "information.html",
     "Kontakt": "contact.html"
-}
+}        
 //
 const imgs = {
     "Aktuálně COVID-19": "covid.png", 
@@ -44,7 +44,7 @@ function makeNavbar(){
     logo.id = "logoimg";
     logo.style.cursor = "pointer";
     logo.addEventListener('click', function(){
-        window.location.href = "/";
+        window.location.href = "ubdex.html";
     });
     
     navbar.appendChild(logo);
@@ -61,18 +61,22 @@ function makeNavbar(){
         lnk.className = "navlink";
         d.appendChild(lnk);
     }
+    let btn = document.createElement('img');
+    btn.src = "images/lines.png";
+    btn.className = "mobilebtn";
+    nav.appendChild(btn);
 }
 
-//
+
 window.addEventListener('load', function(){    
     let f;
     if((f = pageinits[window.location.href.split("/").pop()]) !== undefined){
         f();
     }
     makeNavbar();
+    
 });
-//
-//
+
 class PlaceView extends HTMLElement{
     constructor(){
         super();

@@ -1,34 +1,60 @@
 .infodiv {
   position: relative;
   top: 20vh;
-  display: grid;
-  gap: 35px;
-  grid-template-columns: 1fr 1fr 1fr;
+  width: 70%;
   height: 70vh; }
+  @media (max-width: 600px) {
+    .infodiv {
+      grid-template-columns: 1fr;
+      gap: 10px; } }
   @media (min-width: 600px) {
     .infodiv {
-      width: 70%; } }
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 35px;
+      display: grid; } }
 .infosub {
   position: relative;
-  width: 100%;
-  height: 100%; }
-
+  width: 100%; }
+  @media (min-width: 600px) {
+    .infosub {
+      height: 100%; } }
+  @media (max-width: 600px) {
+    .infosub {
+      height: 100px;
+      margin-top: 5px; } }
 .infosub_img {
   position: absolute;
-  aspect-ratio: 1 / 1;
-  width: auto;
-  height: 60%;
-  left: 50%;
-  transform: translateX(-50%); }
-
+  aspect-ratio: 1 / 1; }
+  @media (min-width: 600px) {
+    .infosub_img {
+      height: 60%;
+      width: auto;
+      left: 50%;
+      transform: translateX(-50%); } }
+  @media (max-width: 600px) {
+    .infosub_img {
+      width: 100px;
+      height: auto;
+      position: relative;
+      height: 100%; } }
 .infosub > span {
   position: absolute;
-  left: 50%;
-  top: 100%;
-  transform: translate(-50%, -100%);
   color: #000000ff;
-  width: max-content; }
-
+  width: max-content;
+  text-transform: uppercase; }
+  @media (min-width: 600px) {
+    .infosub > span {
+      left: 50%;
+      top: 100%;
+      transform: translate(-50%, -100%); } }
+  @media (max-width: 600px) {
+    .infosub > span {
+      left: 0px;
+      position: relative;
+      margin-left: 10px;
+      top: -50%;
+      transform: none;
+      transform: translateY(-50%); } }
 .center {
   position: absolute;
   left: 50%;
@@ -48,7 +74,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("images/bottle.png"); }
-
+  @media (max-width: 600px) {
+    #mainbg {
+      display: none; } }
 #holidaybox {
   position: absolute;
   right: 10%;
@@ -56,7 +84,12 @@
   width: 50%;
   height: 30%;
   background-color: #0000003f; }
-
+  @media (max-width: 600px) {
+    #holidaybox {
+      left: 50%;
+      width: 80%;
+      transform: translateX(-50%);
+      top: 30%; } }
 .placeimg {
   position: absolute;
   width: 100%;
@@ -167,7 +200,9 @@ button:active {
   right: 10%;
   display: flex;
   gap: 50px; }
-
+  @media (max-width: 600px) {
+    .navlinkcnt {
+      display: none; } }
 .navlink {
   font-weight: bold;
   text-align: center;
@@ -179,8 +214,23 @@ button:active {
   text-decoration: none;
   height: fit-content;
   top: 50%;
-  transform: translateY(-50%); }
+  transform: translateY(-50%);
+  transition-duration: 0.6s; }
 
+.navlink:hover {
+  color: #ffffffff;
+  transition-duration: 0.6s;
+  transition-timing-function: ease-in-out; }
+
+.mobilebtn {
+  position: absolute;
+  right: 10px;
+  height: 90%;
+  top: 5px;
+  width: calc($hdsize - 10px); }
+  @media (min-width: 600px) {
+    .mobilebtn {
+      display: none; } }
 #contactdiv {
   position: absolute;
   top: 20%;
@@ -192,17 +242,25 @@ button:active {
     #contactdiv {
       width: 60%;
       height: 70vh; } }
-#contactgrid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: 1fr 1fr;
-  margin-bottom: 20px; }
+  @media only screen and (max-width: 600px) {
+    #contactdiv {
+      width: 90%; } }
+@media only screen and (min-width: 600px) {
+  #contactgrid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 20px; } }
 
 input {
   background-color: #cac7c3ff;
   border: none;
   height: 40px; }
-
+  @media only screen and (max-width: 600px) {
+    input {
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 0px; } }
 textarea {
   background-color: #cac7c3ff;
   border: none;
@@ -210,3 +268,10 @@ textarea {
   width: 100%;
   height: 40%;
   resize: none; }
+  @media only screen and (max-width: 600px) {
+    textarea {
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 0px; } }
+#contactbtn {
+  margin-top: 20px; }

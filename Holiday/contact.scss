@@ -12,21 +12,31 @@
         width: 60%;
         height: 70vh;
     }
+    @media only screen and (max-width: 600px){
+        width: 90%;
+    }
     transform: translateX(-50%);
     
 }
 
 #contactgrid{
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr 1fr;
-    margin-bottom: 20px;
+    @media only screen and (min-width: 600px){
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 20px;
+    }
 }
 
 @mixin textbox{
     background-color: #cac7c3ff;
     border: none;
     height: 40px;
+    @media only screen and (max-width: 600px){
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
 }
 input{
     @include textbox;
@@ -38,4 +48,7 @@ textarea{
     resize: none;
 }
 
+#contactbtn{
+    margin-top: 20px;
+}
 
