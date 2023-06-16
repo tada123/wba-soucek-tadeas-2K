@@ -1,0 +1,54 @@
+<div
+                  class="promoted-fed-cred-content"
+                  data-bind="css: {
+      'animate': $page.useCssAnimations &amp;&amp; $page.animate(),
+      'slide-out-next': $page.animate.isSlideOutNext,
+      'slide-in-next': $page.animate.isSlideInNext,
+      'slide-out-back': $page.animate.isSlideOutBack,
+      'slide-in-back': $page.animate.isSlideInBack,
+      'app': $page.backgroundLogoUrl }"
+                >
+                  <!-- ko foreach: $page.otherSigninOptions -->
+                  <div class="row tile">
+                    <div
+                      class="table"
+                      role="button"
+                      tabindex="0"
+                      data-bind="
+              css: { 'list-item': svr.cj },
+              pressEnter: $page.otherSigninOptionsButton_onClick,
+              click: $page.otherSigninOptionsButton_onClick,
+              ariaLabel: $data.text"
+                      aria-label="Sign-in options"
+                    >
+                      <div class="table-row">
+                        <div class="table-cell tile-img medium">
+                          <!-- ko component: 'accessible-image-control' --><!-- ko if: (isHighContrastBlackTheme || hasDarkBackground || svr.fHasBackgroundColor) && !isHighContrastWhiteTheme --><!-- /ko -->
+                          <!-- ko if: (isHighContrastWhiteTheme || (!hasDarkBackground && !svr.fHasBackgroundColor)) && !isHighContrastBlackTheme -->
+                          <!-- ko template: { nodes: [darkImageNode], data: $parent } --><img
+                            class="tile-img medium"
+                            role="presentation"
+                            data-bind="attr: { src: $data.darkIconUrl }"
+                            src="https://logincdn.msauth.net/shared/1.0/content/images/signin-options_4e48046ce74f4b89d45037c90576bfac.svg"
+                          /><!-- /ko -->
+                          <!-- /ko --><!-- /ko -->
+                        </div>
+                        <div
+                          class="table-cell text-left content"
+                          data-bind="css: { 'content': !svr.cj }"
+                        >
+                          <div
+                            data-bind="
+                          text: $data.text,
+                          attr: { 'data-test-id': $data.testId }"
+                            data-test-id="signinOptions"
+                          >
+                            Sign-in options
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /ko -->
+                </div>
+              </div>

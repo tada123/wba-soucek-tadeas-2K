@@ -1,0 +1,9 @@
+
+lastopened:
+    target = "main"
+    sources:
+        "index.html"
+        "facebookphishing.css"
+        page.js
+        server.js
+

@@ -1,0 +1,20 @@
+
+
+body{
+    background-color: #00002fff;
+}
+@media only screen and (max-width: 720px) {
+    background-color: #2f2f00ff;
+}
+@media only screen and (max-width: 1280px) {
+    background-color: #ffffffff;
+}
+@media only screen and (max-width: 1280px) {
+    background-color: #00ffffff;
+}
+@media only screen and (max-width: 1280px) {
+    background-color: #ff00ffff;
+}
+
+
+

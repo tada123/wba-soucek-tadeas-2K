@@ -1,11 +1,11 @@
 
 #Easy settings:
-project_name = "flex-0"
-binary_name = "flex-0"
+project_name = "Netlify"
+binary_name = "Netlify"
 
 debugger = "/usr/bin/gdb"
 browser = "firefox" #Browser to test your webpage
-#testurl = 
+
 
 #Advanced settings:
 #######################################################
@@ -30,10 +30,12 @@ project:
 
     main_target = "$project_name"
     clear:
-        command = ""
+        command = " "
     build:
-        command = "echo blah"
-    debug:
-        command = "$browser; $testurl;"
+        command = " "
+    debugging:
+        debugger:
+            driver = "CDP"
+            file = "file://index.html"
 
 

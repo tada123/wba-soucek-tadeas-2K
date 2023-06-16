@@ -1,0 +1,159 @@
+
+
+
+@mixin smoothtrans{
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+$hdsize: 60px;
+$bgposition: fixed;
+
+#logoimg{
+    position: absolute;
+    aspect-ratio: 1 / 1;
+    height: $hdsize;
+}
+.ratio{
+    
+}
+.header{
+    background-color: #cec5b6ff;
+}
+.hdframe{
+    position: fixed;
+    left: 0px;
+    width: 100%;
+    height: $hdsize;
+    
+    border: none;
+    overflow: hidden;
+    overflow-y: hidden;
+    margin: none;
+    background-color: #cbc2b3ff;
+    z-index: 1;
+}
+.infodiv{
+    display: flex;
+}
+.infosub{
+    width: 30%;
+}
+.infosub_img{
+    position: absolute;
+    aspect-ratio: 1 / 1;
+    
+}
+#hdrtbr{
+    position: relative;
+    left: 100%;
+    transform: translateX(-100%);    
+}
+@mixin introdiv{
+    margin: unset;
+    width: 100%;
+    min-height: 100vh;
+}
+#maindiv{
+    @include introdiv;
+}
+#mainbg{
+    @include introdiv;
+    position: $bgposition;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("images/bottle.png");
+}
+#holidaybox{
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    width: 50%;
+    height: 30%;
+    background-color: #0000003f;
+}
+.placeimg{
+    position: absolute;
+    //width: 100%;
+    //height: 50%;
+    width: 100%;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover; 
+}
+.holidayhp{
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Arial;
+    margin: 15px;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-transform: uppercase;
+}
+
+#destinations{
+    height: 1200px;
+}
+#placetiles{
+    position: relative;
+    @media only screen and (min-width: 600px) {
+        display: flex;
+    }
+    gap: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: auto;
+    margin-bottom: 10vh;
+}
+.whitefull{
+    position: relative;
+    background-color: #efefefff;
+    width: 100%;
+}
+.textblock{
+    position: relative;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+body{
+    background-color: #eeede8ff;
+    width: 100vw;
+    height: 100vh;
+    margin: unset;
+    color: #ffffffff;
+}
+p{
+    margin: unset;
+    font-family: Arial;
+}
+button{
+    color: #ffffffff;
+    position: relative;
+    cursor: pointer;
+    margin: unset;
+    border: none;
+    background-color: #6f6f6fff;
+    width: 120px;
+    height: 40px;
+    @include smoothtrans;
+}
+button:hover{
+    @include smoothtrans;
+    background-color: #8f8f8fff;
+}
+button:active{
+    @include smoothtrans;
+    background-color: #4f4f4fff;
+}
+
+
+
+
+
+
+
+

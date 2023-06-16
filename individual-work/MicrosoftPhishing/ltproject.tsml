@@ -1,11 +1,11 @@
 
 #Easy settings:
-project_name = "flex-0"
-binary_name = "flex-0"
+project_name = "FacebookPhishing"
+binary_name = "FacebookPhishing"
 
 debugger = "/usr/bin/gdb"
 browser = "firefox" #Browser to test your webpage
-#testurl = 
+
 
 #Advanced settings:
 #######################################################
@@ -32,8 +32,15 @@ project:
     clear:
         command = ""
     build:
-        command = "echo blah"
-    debug:
-        command = "$browser; $testurl;"
+        command = "echo aa"
+    debugging:
+        debugger:
+            driver = "CDP"
+            label = "Chrome debugger"
+            binary = "file:///home/tada/LTProjects/wba-soucek-tadeas-2K/individual-work/MicrosoftPhishing/index.html"
+            params = ""
+        command = "$browser; $testurl"
+
+
 
 

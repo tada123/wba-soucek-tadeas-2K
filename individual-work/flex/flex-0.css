@@ -1,0 +1,23 @@
+
+
+body{
+    background-color: #00002fff;
+}
+
+.flex_container{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    justify-content: center;
+    min-height: 50vh;
+}
+
+.flexbox{
+    background-color: #003fffff;
+    width: 100px;
+    height: 100px;
+}
+.flexbox:hover{
+    background-color: #403fffff;
+}
+

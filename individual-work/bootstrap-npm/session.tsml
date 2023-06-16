@@ -1,0 +1,7 @@
+
+lastopened:
+    target = "main"
+    sources:
+        "index.html"
+        "bootstrap-npm.css"
+

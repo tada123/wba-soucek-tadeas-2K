@@ -1,11 +1,11 @@
 
 #Easy settings:
-project_name = "flex-0"
-binary_name = "flex-0"
+project_name = "Holiday"
+binary_name = "Holiday"
 
 debugger = "/usr/bin/gdb"
 browser = "firefox" #Browser to test your webpage
-#testurl = 
+
 
 #Advanced settings:
 #######################################################
@@ -32,8 +32,10 @@ project:
     clear:
         command = ""
     build:
-        command = "echo blah"
+        command = "sassc holiday.scss > holiday.css"
     debug:
-        command = "$browser; $testurl;"
+        binary = "/dev/null"
+        command = "echo Blah"
+#        command = "$browser; $testurl"
 
 
