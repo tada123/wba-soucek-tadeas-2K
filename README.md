@@ -7,7 +7,7 @@ WBA work to my school lessons ( mandatory unnecessary work (which is required to
 # WARNING!!
 This repo will expire at 2023-06-30T8:00:00 UTC!!! 
 
-Currently publicly available at /dev/null
-Feel free to copy, if you want ;)
+Currently publicly available at /dev/null<br>
+Feel free to copy, if you want ;) <br>
 
 P.S. Maybe useful for another students to prevent time waste
